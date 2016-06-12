@@ -2,7 +2,9 @@
 
 run_analysis.R that does the following.
 
-Step1.Merges the training and the test sets to create one data set.
+First to download the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Step1.Merges the training and the test sets to create one data set 
 
 Step2.Extracts only the measurements on the mean and standard deviation for each measurement.
 
