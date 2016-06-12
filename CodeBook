@@ -1,0 +1,29 @@
+#This codebook indicates the variables, the data, manipulatation step to the data
+
+1. First to download the data from the https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+2. Then using read.table function to read training data from ./train data and create traindata, traindatay and traindatasub respectively,
+
+same method to test data. 
+
+3. Then merge the train data and test data by using rbind function as the they both have same number of variables, so mergedataxy, mergedatay,mergedatasubject are created. 
+
+4. After that, read the features.txt to only extract the variables that calculate mean() and std() by using grep function 
+
+5. Then assign the names that extract from step4 to mergedataxy, further to eliminate the "_" in the variable name 
+
+6. Read the activity_labels.txt file from the "./data"" folder and store the data in a variable called activity.
+
+7.Clean the activity names in the second column of activity. If the name has an underscore between letters, we remove the underscore and 
+
+8. Transform the values of mergedatay according to the activity data frame.
+
+9.Combine the mergedatasubject,mergedatay,mergedataxy by column to get a new cleaned 10299x68 data frame dataset1, 
+The "subject" column contains integers that range from 1 to 30 inclusive; 
+the "activity" column contains 6 kinds of activity names
+
+10.Write the dataset1 to merged_data.txt
+
+11.Calucalte the merged_data.txt mean for each activity in each subject, the result is 180 observations and 68 variables 
+
+12 Write the dataset2 to average_meraged_data.txt
